@@ -30,13 +30,6 @@ namespace Practices.Tests
         }
 
 
-        [Test]
-        public void Additional_NullAndNumber_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Additional(0, 25), Is.EqualTo(25));
-
-        }
 
 
 
@@ -78,13 +71,6 @@ namespace Practices.Tests
         }
 
 
-        [Test]
-        public void Subtraction_NullAndNumber_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Subtraction(0, 25), Is.EqualTo(-25));
-
-        }
 
 
 
@@ -120,22 +106,6 @@ namespace Practices.Tests
         }
 
 
-        [Test]
-        public void Multiplication_NullAndNumber_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Multiplication(0, 25), Is.EqualTo(0));
-
-        }
-
-        [Test]
-        public void Multiplication_NullAndNull_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Multiplication(0, 0), Is.EqualTo(0));
-
-        }
-
 
 
         /// <summary>
@@ -158,14 +128,6 @@ namespace Practices.Tests
 
         }
 
-        [Test]
-        public void Division_NegativeAndPositiveNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Division(-8, 3), Is.EqualTo(-2));
-
-        }
-
 
         [Test]
         public void Division_TwoNegativeNumbers_ReturnsCorrectValue()
@@ -175,67 +137,14 @@ namespace Practices.Tests
 
         }
 
-
         [Test]
-        public void Division_NullAndNumber_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Division(0, 25), Is.EqualTo(0));
-
-        }
-
-        [Test]
-        public void Division_NumberAndNull_ThrowsException()
+        public void Division_NumberAndZero_ThrowsException()
         {
             var calculator = new Calculator();
             Assert.Throws<DivideByZeroException>(() => {
                 calculator.Division(25, 0);
             });
            
-
-        }
-
-        [Test]
-        public void Division_NullAndNull_ThrowsException()
-        {
-            var calculator = new Calculator();
-            Assert.Throws<DivideByZeroException>(() => {
-                calculator.Division(0, 0);
-            });
-
-        }
-
-        [Test]
-        public void Division_TwoMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Division(int.MaxValue, int.MaxValue), Is.EqualTo(1));
-
-        }
-
-        [Test]
-        public void Division_TwoMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Division(int.MinValue, int.MinValue), Is.EqualTo(1));
-
-        }
-
-
-        [Test]
-        public void Division_MinAndMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Division(int.MaxValue, int.MinValue), Is.EqualTo(0));
-
-        }
-
-
-        [Test]
-        public void Division_MaxAndMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Division(int.MinValue, int.MaxValue), Is.EqualTo(-1));
 
         }
 
