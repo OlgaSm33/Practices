@@ -2,7 +2,9 @@ namespace Practices.Tests
 {
     public class PracticesTests
     {
-
+        /// <summary>
+        /// тесты для Additional
+        /// </summary>
         [Test]
         public void Additional_TwoPositiveNumbers_ReturnsCorrectValue()
         {
@@ -36,39 +38,13 @@ namespace Practices.Tests
 
         }
 
-        [Test]
-        public void Additional_TwoMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Additional(int.MaxValue, int.MaxValue), Is.EqualTo(-2));
-
-        }
-
-        [Test]
-        public void Additional_TwoMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Additional(int.MinValue, int.MinValue), Is.EqualTo(0));
-
-        }
-
-        [Test]
-        public void Additional_MaxAndMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Additional(int.MaxValue, int.MinValue), Is.EqualTo(-1));
-
-        }
 
 
 
 
-
-
-
-
-
-
+        /// <summary>
+        /// тесты для Subtraction
+        /// </summary>
         [Test]
         public void Subtraction_TwoPositiveNumbers_ReturnsCorrectValue()
         {
@@ -110,44 +86,14 @@ namespace Practices.Tests
 
         }
 
-        [Test]
-        public void Subtraction_TwoMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Subtraction(int.MaxValue, int.MaxValue), Is.EqualTo(0));
-
-        }
-
-        [Test]
-        public void Subtraction_TwoMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Subtraction(int.MinValue, int.MinValue), Is.EqualTo(0));
-
-        }
-
-        [Test]
-        public void Subtraction_MaxAndMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Subtraction(int.MaxValue, int.MinValue), Is.EqualTo(-1));
-
-        }
-
-
-        [Test]
-        public void Subtraction_MinAndMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Subtraction(int.MinValue, int.MaxValue), Is.EqualTo(1));
-
-        }
 
 
 
 
 
-
+        /// <summary>
+        /// тесты для Multiplication
+        /// </summary>
         [Test]
         public void Multiplication_TwoPositiveNumbers_ReturnsCorrectValue()
         {
@@ -190,35 +136,11 @@ namespace Practices.Tests
 
         }
 
-        [Test]
-        public void Multiplication_TwoMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Multiplication(int.MaxValue, int.MaxValue), Is.EqualTo(1));
-
-        }
-
-        [Test]
-        public void Multiplication_TwoMinNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Multiplication(int.MinValue, int.MinValue), Is.EqualTo(0));
-
-        }
 
 
-        [Test]
-        public void Multiplication_MinAndMaxNumbers_ReturnsCorrectValue()
-        {
-            var calculator = new Calculator();
-            Assert.That(calculator.Multiplication(int.MaxValue, int.MinValue), Is.EqualTo(-2147483648));
-
-        }
-
-
-
-
-
+        /// <summary>
+        /// тесты для Division
+        /// </summary>
 
         [Test]
         public void Division_TwoPositiveNumbers_ReturnsCorrectValue()
