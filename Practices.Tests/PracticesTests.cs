@@ -21,7 +21,6 @@ namespace Practices.Tests
         [Test]
         public void Additional_ValidInputs_ReturnsCorrectValue(int x, int y, int expected)
         {
-            var calculator = new Calculator();
             Assert.That(calculator.Additional(7, 5), Is.EqualTo(12));
 
         }
@@ -35,7 +34,6 @@ namespace Practices.Tests
         [Test]
         public void Subtraction_ValidInputs_ReturnsCorrectValue(int x, int y, int expected)
         {
-            var calculator = new Calculator();
             Assert.That(calculator.Subtraction(7, 5), Is.EqualTo(2));
 
         }
@@ -49,7 +47,6 @@ namespace Practices.Tests
         [Test]
         public void Multiplication_ValidInputs_ReturnsCorrectValue(int x, int y, int expected)
         {
-            var calculator = new Calculator();
             Assert.That(calculator.Multiplication(7, 5), Is.EqualTo(35));
 
         }
@@ -63,7 +60,6 @@ namespace Practices.Tests
         [Test]
         public void Division_ValidInputs_ReturnsCorrectValue(int x, int y, int expected)
         {
-            var calculator = new Calculator();
             Assert.That(calculator.Division(8, 3), Is.EqualTo(2));
 
         }
@@ -71,7 +67,6 @@ namespace Practices.Tests
         [Test]
         public void Division_NumberAndZero_ThrowsException()
         {
-            var calculator = new Calculator();
             Assert.Throws<DivideByZeroException>(() => {
                 calculator.Division(25, 0);
             });
